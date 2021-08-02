@@ -1,0 +1,16 @@
+{"info_schedule":
+    {"schedule_hour": "20",
+    "schedule_minute": "05"},
+    "info_sys_email":
+  {"email_address": "autotradestock@gmail.com",
+    "email_pass": "xejiaxyjuieadfom"},
+  "info_fpt":
+  {"ftp_ip":"45.124.84.24",
+    "ftp_user":"tvinh",
+    "ftp_password":"123456",
+    "ftp_file_path": "",
+    "fpt_file_name": "EMA20_B30_"
+  },
+"ssi_web_link": "https://webtrading.ssi.com.vn/",
+  "total_money": 3000000000
+}
