@@ -81,7 +81,7 @@ body {
 
 <main class="form-signin">
         <img class="mb-4" src="{{url_for('static', filename='SSI.jpg')}}" alt="" width="700" height="350">
-    <h1 class="h2 mb-3 fw-normal">DIỄN BIẾN GIÁ CỔ PHIẾU</h1>
+    <h1 class="h2 mb-3 fw-normal">DIỄN BIẾN GIÁ CỔ PHIẾU {{'{:,.2f}'.format(1234568.126) | replace(',','*') | replace('.',',') | replace('*','.') }}</h1>
 
 
   <div class="my-3 p-3 bg-body rounded shadow-sm">
@@ -100,7 +100,7 @@ body {
                   <strong class="text-gray-dark" >  ================================================= </strong>
                 <strong class="text-gray-dark" >  Ngày {{stocks_infor['date'][6:8]}} tháng {{stocks_infor['date'][4:6]}} năm {{stocks_infor['date'][0:4]}} </strong>
 
-            <strong class="text-gray-dark" >  Giá trị thực tế: {{'{0:0.2f}'.format(stocks_infor['gia_tri_tai_san_thuc'])}} </strong>
+            <strong class="text-gray-dark" >  Giá trị thực tế: {{'{:,.2f}'.format(stocks_infor['gia_tri_tai_san_thuc']) | replace(',','*') | replace('.',',') | replace('*','.')}} </strong>
 
 <table class="table" align="centre">
   <thead>
@@ -124,12 +124,12 @@ body {
       <td>{{symbol}}</td>
       <td>{{stocks_infor['stocks_info'][symbol]['ck_tong']}}</td>
                      <td>{{stocks_infor['stocks_info'][symbol]['ck_kha_dung']}}</td>
-                     <td>{{'{0:0.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tb'])}}</td>
-                           <td>{{'{0:0.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tri'])}}</td>
-                     <td>{{'{0:0.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tt'])}}</td>
-                     <td>{{'{0:0.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tri_tt'])}}</td>
-                     <td>{{'{0:0.2f}'.format(stocks_infor['stocks_info'][symbol]['lai_lo'])}}</td>
-                     <td>{{'{0:0.2f}'.format(stocks_infor['stocks_info'][symbol]['lai_lo_phan_tram'])}}</td>
+                     <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tb']) | replace(',','*') | replace('.',',') | replace('*','.')}}</td>
+                           <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tri']) | replace(',','*') | replace('.',',') | replace('*','.')}}</td>
+                     <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tt']) | replace(',','*') | replace('.',',') | replace('*','.')}}</td>
+                     <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tri_tt'])| replace(',','*') | replace('.',',') | replace('*','.')}}</td>
+                     <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['lai_lo'])| replace(',','*') | replace('.',',') | replace('*','.')}}</td>
+                     <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['lai_lo_phan_tram'])| replace(',','*') | replace('.',',') | replace('*','.')}}</td>
     </tr>
 
               {% endfor %}
@@ -137,11 +137,11 @@ body {
       <td></td>
                      <td></td>
                      <td></td>
-                           <td>{{'{0:0.2f}'.format(stocks_infor['gia_tri_tong'])}}</td>
+                           <td>{{'{:,.2f}'.format(stocks_infor['gia_tri_tong'])| replace(',','*') | replace('.',',') | replace('*','.')}}</td>
                      <td></td>
-                     <td>{{'{0:0.2f}'.format(stocks_infor['gia_tri_tt_tong'])}}</td>
-                     <td>{{'{0:0.2f}'.format(stocks_infor['lai_lo_tong'])}}</td>
-                     <td>{{'{0:0.2f}'.format(stocks_infor['lai_lo_tong_phan_tram'])}}</td>
+                     <td>{{'{:,.2f}'.format(stocks_infor['gia_tri_tt_tong'])| replace(',','*') | replace('.',',') | replace('*','.')}}</td>
+                     <td>{{'{:,.2f}'.format(stocks_infor['lai_lo_tong'])| replace(',','*') | replace('.',',') | replace('*','.')}}</td>
+                     <td>{{'{:,.2f}'.format(stocks_infor['lai_lo_tong_phan_tram'])| replace(',','*') | replace('.',',') | replace('*','.')}}</td>
     </tr>
 
   </tbody>
