@@ -81,7 +81,7 @@ body {
 
 <main class="form-signin">
         <img class="mb-4" src="{{url_for('static', filename='SSI.jpg')}}" alt="" width="700" height="350">
-    <h1 class="h2 mb-3 fw-normal">DIỄN BIẾN GIÁ CỔ PHIẾU {{'{:,.2f}'.format(1234568.126) | replace(',','*') | replace('.',',') | replace('*','.') }}</h1>
+    <h1 class="h2 mb-3 fw-normal">DIỄN BIẾN GIÁ CỔ PHIẾU </h1>
 
 
   <div class="my-3 p-3 bg-body rounded shadow-sm">
@@ -108,6 +108,15 @@ body {
       <th scope="col">Mã CK</th>
       <th scope="col">Tổng</th>
       <th scope="col">CK khả dụng</th>
+         <th scope="col">Mua-T0</th>
+          <th scope="col">Ban-T0</th>
+         <th scope="col">Mua-T1</th>
+                 <th scope="col">Ban-T1</th>
+         <th scope="col">Mua-T2</th>
+
+
+        <th scope="col">Ban-T2</th>
+
         <th scope="col">Giá TB</th>
         <th scope="col">Giá trị</th>
         <th scope="col">Giá TT</th>
@@ -124,6 +133,12 @@ body {
       <td>{{symbol}}</td>
       <td>{{stocks_infor['stocks_info'][symbol]['ck_tong']}}</td>
                      <td>{{stocks_infor['stocks_info'][symbol]['ck_kha_dung']}}</td>
+                     <td>{{stocks_infor['stocks_info'][symbol]['mua_t0']}}</td>
+                     <td>{{stocks_infor['stocks_info'][symbol]['ban_t0']}}</td>
+                     <td>{{stocks_infor['stocks_info'][symbol]['mua_t1']}}</td>
+                     <td>{{stocks_infor['stocks_info'][symbol]['ban_t1']}}</td>
+                     <td>{{stocks_infor['stocks_info'][symbol]['mua_t2']}}</td>
+                     <td>{{stocks_infor['stocks_info'][symbol]['ban_t2']}}</td>
                      <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tb']) | replace(',','*') | replace('.',',') | replace('*','.')}}</td>
                            <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tri']) | replace(',','*') | replace('.',',') | replace('*','.')}}</td>
                      <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tt']) | replace(',','*') | replace('.',',') | replace('*','.')}}</td>
@@ -135,6 +150,12 @@ body {
               {% endfor %}
      <td></td>
       <td></td>
+                     <td></td>
+                     <td></td>
+                                      <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
                      <td></td>
                      <td></td>
                            <td>{{'{:,.2f}'.format(stocks_infor['gia_tri_tong'])| replace(',','*') | replace('.',',') | replace('*','.')}}</td>
