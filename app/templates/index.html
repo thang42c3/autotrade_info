@@ -116,7 +116,7 @@ body {
 
 
         <th scope="col">Ban-T2</th>
-
+        <th scope="col">Tien cho ve</th>
         <th scope="col">Giá TB</th>
         <th scope="col">Giá trị</th>
         <th scope="col">Giá TT</th>
@@ -139,6 +139,7 @@ body {
                      <td>{{stocks_infor['stocks_info'][symbol]['ban_t1']}}</td>
                      <td>{{stocks_infor['stocks_info'][symbol]['mua_t2']}}</td>
                      <td>{{stocks_infor['stocks_info'][symbol]['ban_t2']}}</td>
+                                          <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['tien_ko_the_mua']) | replace(',','*') | replace('.',',') | replace('*','.')}}</td>
                      <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tb']) | replace(',','*') | replace('.',',') | replace('*','.')}}</td>
                            <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tri']) | replace(',','*') | replace('.',',') | replace('*','.')}}</td>
                      <td>{{'{:,.2f}'.format(stocks_infor['stocks_info'][symbol]['gia_tt']) | replace(',','*') | replace('.',',') | replace('*','.')}}</td>
@@ -157,6 +158,7 @@ body {
                      <td></td>
                      <td></td>
                      <td></td>
+                 <td>{{'{:,.2f}'.format(stocks_infor['tien_khong_the_mua_tong']) | replace(',','*') | replace('.',',') | replace('*','.')}}</td>
                      <td></td>
                            <td>{{'{:,.2f}'.format(stocks_infor['gia_tri_tong'])| replace(',','*') | replace('.',',') | replace('*','.')}}</td>
                      <td></td>
