@@ -26,7 +26,7 @@ body {
 
 body {
   display: flex;
-  align-items: center;
+  align-items: right;
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #f5f5f5;
@@ -34,7 +34,7 @@ body {
 
 .form-signin {
   width: 100%;
-  max-width: 500px;
+
   padding: 15px;
   margin: auto;
 }
@@ -98,9 +98,14 @@ body {
 
      {% for stocks_infor in stocks_infors %}
                   <strong class="text-gray-dark" >  ================================================= </strong>
+        <br>
                 <strong class="text-gray-dark" >  Ngày {{stocks_infor['date'][6:8]}} tháng {{stocks_infor['date'][4:6]}} năm {{stocks_infor['date'][0:4]}} </strong>
-
-            <strong class="text-gray-dark" >  Giá trị thực tế: {{'{:,.2f}'.format(stocks_infor['gia_tri_tai_san_thuc']) | replace(',','*') | replace('.',',') | replace('*','.')}} </strong>
+    <br>
+            <strong class="text-red" >  Tổng tiền: {{'{:,.2f}'.format(stocks_infor['gia_tri_tai_san_thuc']) | replace(',','*') | replace('.',',') | replace('*','.')}} </strong>
+     <br>
+                <p class="text-gray-dark" >  Giá trị thực tế: {{'{:,.2f}'.format(stocks_infor['gia_tri_tt_tong']) | replace(',','*') | replace('.',',') | replace('*','.')}} </p>
+            <p class="text-gray-dark" >  Tiền khả dụng: {{'{:,.2f}'.format(stocks_infor['tien_co_the_mua']) | replace(',','*') | replace('.',',') | replace('*','.')}} </p>
+                <p class="text-gray-dark" >  Tiền chờ về: {{'{:,.2f}'.format(stocks_infor['tien_khong_the_mua_tong']) | replace(',','*') | replace('.',',') | replace('*','.')}} </p>
 
 <table class="table" align="centre">
   <thead>
