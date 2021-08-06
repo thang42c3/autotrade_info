@@ -105,13 +105,13 @@ margin-left: 633px
      Ngày {{stocks_infor['date'][6:8]}} tháng {{stocks_infor['date'][4:6]}} năm {{stocks_infor['date'][0:4]}}
     <br>  1. Tổng tiền: {{'{:,.2f}'.format(stocks_infor['gia_tri_tai_san_thuc']) | replace(',','*') | replace('.',',') | replace('*','.')}} </strong>
 
-    <div class = "title_body">
-    <p class="text-gray-dark" style="text-align:left" >  2. Vốn: {{'{:,.2f}'.format(stocks_infor['tien_ban_dau']) | replace(',','*') | replace('.',',') | replace('*','.')}}
+
+    <p class="text-gray-dark" >  2. Vốn: {{'{:,.2f}'.format(stocks_infor['tien_ban_dau']) | replace(',','*') | replace('.',',') | replace('*','.')}}
       <br>  3. Lãi/lỗ: {{'{:,.2f}'.format(stocks_infor['lai_lo_tien_ban_dau']) | replace(',','*') | replace('.',',') | replace('*','.')}} ({{'{:,.2f}'.format(stocks_infor['lai_lo_tien_ban_dau_phan_tram'])| replace(',','*') | replace('.',',') | replace('*','.')}} %)
         <br> 4. Giá trị chứng khoán thực: {{'{:,.2f}'.format(stocks_infor['gia_tri_tt_tong']) | replace(',','*') | replace('.',',') | replace('*','.')}} <br>
         5. Tiền khả dụng: {{'{:,.2f}'.format(stocks_infor['tien_co_the_mua']) | replace(',','*') | replace('.',',') | replace('*','.')}}
                 <br>  6. Tiền bán cổ phiếu chờ về: {{'{:,.2f}'.format(stocks_infor['tien_khong_the_mua_tong']) | replace(',','*') | replace('.',',') | replace('*','.')}} </br>
-</div>
+
 <table class="table" align="centre">
   <thead>
     <tr>
