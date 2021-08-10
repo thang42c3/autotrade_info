@@ -11,7 +11,7 @@ import re
 '''
 myclient = pymongo.MongoClient("mongodb+srv://ducthangbnn:Oivung1215@cluster0.1rpru.mongodb.net/test", connect=False)
 mydb = myclient["stocks"]
-mycol = mydb["auto_stock_info_check"]
+mycol = mydb["auto_stock_info"]
 
 
 @app.route('/', methods=['GET', 'POST'])
